@@ -3,4 +3,59 @@
 {% block title %} Welcome to the home page {% endblock %}
 
 
-{% block body %} Hello world! {% endblock %}
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1>Survey Form</h1>
+    <form action="/predict" method="POST">
+        <label for="age">Age:</label>
+        <select id="age" name="age">
+            {0: '18-21', 1: '22-24', 2: '25-29', 3: '30-34', 4: '35-39',
+5: '40-44', 6: '45-49', 7: '50-54', 8: '55-59', 9: '60-69', 10: '70+'}
+        </select><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <!-- Paste gender mapping options here -->
+        </select><br>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <!-- Paste country mapping options here -->
+        </select><br>
+
+        <label for="highest_deg">Highest Degree:</label>
+        <select id="highest_deg" name="highest_deg">
+            <!-- Paste highest_deg mapping options here -->
+        </select><br>
+
+        <label for="code_experience">Coding Experience:</label>
+        <select id="code_experience" name="code_experience">
+            <!-- Paste code_experience mapping options here -->
+        </select><br>
+
+        <label for="current_title">Current Title:</label>
+        <select id="current_title" name="current_title">
+            <!-- Paste current_title mapping options here -->
+        </select><br>
+
+        <label for="company_size">Company Size:</label>
+        <select id="company_size" name="company_size">
+            <!-- Paste company_size mapping options here -->
+        </select><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+
+
+{% endblock %}
