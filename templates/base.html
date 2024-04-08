@@ -7,10 +7,13 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
 </head>
 <body>
-    <div>
-        <h1>Welcome to Software Design</h1>
-        <hr>
-        <br>
+    <h1>Welcome to Software Design</h1>
+    <hr>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/about">About</a>
+    </nav>
+    <br>
         
         {% block body %}
 
