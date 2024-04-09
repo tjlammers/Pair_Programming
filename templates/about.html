@@ -1,10 +1,9 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about</title>
-</head>
-<body>
-    <img src="WorkingPicture.png" alt="Pair Programming: Trevor Lammers and David Powers">
-</body>
-</html>
+{% block body %}
+  <img
+    src="{{ url_for('static', filename='WorkingPicture.png') }}"
+  />
+
+  <p>
+    Lorem ipsum dolor sit amet, ...
+  </p>
+{% endblock %}
